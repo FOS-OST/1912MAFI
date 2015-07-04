@@ -57,10 +57,9 @@ try {
 
     $app->post('/createSession',function() use ($app) {
         $session=new Session();
-        $result=array('sessionId'=>$session->session_id);
 
         $app->response->setContentType("application/json",'UTF-8');
-        $app->response->setJsonContent($result);
+        $app->response->setContent($session->session_id);
 
         return $app->response;
     });
