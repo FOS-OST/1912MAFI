@@ -42,10 +42,16 @@ try {
     });
 
     $app->post('/getNews',function() use ($app) {
-
+        $new=new News();
+        $app->response->setContentType("application/json",'UTF-8');
+        $app->response->setJsonContent(array($new->makeNew()));
+        return $app->response;
     });
     $app->post('/getNewsItem',function() use ($app) {
-
+        $new=new News();
+        $app->response->setContentType("application/json",'UTF-8');
+        $app->response->setJsonContent(array($new->makeNewItem()));
+        return $app->response;
     });
 
 
@@ -87,31 +93,58 @@ try {
 
 
     $app->post('/getRestaurant',function() use ($app) {
-
+        $restaurant=new Restaurant();
+        $app->response->setContentType("application/json",'UTF-8');
+        $app->response->setJsonContent($restaurant->makeNew("22222222"));
+        return $app->response;
     });
     $app->post('/getReviewImages',function() use ($app) {
-
+        $reviewIgm=new ReviewImage();
+        $app->response->setContentType("application/json",'UTF-8');
+        $app->response->setJsonContent(array($reviewIgm->makeNew()));
+        return $app->response;
     });
     $app->post('/searchRestaurant',function() use ($app) {
-
+        $restaurant=new Restaurant();
+        $app->response->setContentType("application/json",'UTF-8');
+        $app->response->setJsonContent(array($restaurant->makeSearchResult()));
+        return $app->response;
     });
     $app->post('/categorySearch',function() use ($app) {
-
+        $restaurant=new Restaurant();
+        $app->response->setContentType("application/json",'UTF-8');
+        $app->response->setJsonContent(array($restaurant->makeSearchResult()));
+        return $app->response;
     });
     $app->post('/scoreSearch',function() use ($app) {
-
+        $restaurant=new Restaurant();
+        $app->response->setContentType("application/json",'UTF-8');
+        $app->response->setJsonContent(array($restaurant->makeSearchResult()));
+        return $app->response;
     });
     $app->post('/getLabels',function() use ($app) {
-
+        $label=new Label();
+        $app->response->setContentType("application/json",'UTF-8');
+        $app->response->setJsonContent(array($label->makeNew()));
+        return $app->response;
     });
     $app->post('/getReviewLabels',function() use ($app) {
-
+        $label=new Label();
+        $app->response->setContentType("application/json",'UTF-8');
+        $app->response->setJsonContent(array($label->makeNew()));
+        return $app->response;
     });
     $app->post('/locationSearch',function() use ($app) {
-
+        $restaurant=new Restaurant();
+        $app->response->setContentType("application/json",'UTF-8');
+        $app->response->setJsonContent(array($restaurant->makeSearchResult()));
+        return $app->response;
     });
     $app->post('/labelsSearch',function() use ($app) {
-
+        $restaurant=new Restaurant();
+        $app->response->setContentType("application/json",'UTF-8');
+        $app->response->setJsonContent(array($restaurant->makeSearchResult()));
+        return $app->response;
     });
 
     $app->handle();

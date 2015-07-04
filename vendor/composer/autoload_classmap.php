@@ -7,9 +7,12 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'BaseController' => $baseDir . '/app/controller/BaseController.php',
+    'Label' => $baseDir . '/app/model/Label.php',
     'NewController' => $baseDir . '/app/controller/NewController.php',
+    'News' => $baseDir . '/app/model/News.php',
     'Restaurant' => $baseDir . '/app/model/Restaurant.php',
     'RestaurantController' => $baseDir . '/app/controller/RestaurantController.php',
+    'ReviewImage' => $baseDir . '/app/model/ReviewImage.php',
     'Session' => $baseDir . '/app/model/Session.php',
     'User' => $baseDir . '/app/model/User.php',
     'UserController' => $baseDir . '/app/controller/UserController.php',
